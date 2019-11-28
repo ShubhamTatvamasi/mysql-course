@@ -1,5 +1,17 @@
 # mysql-course
 
+Start the mysql server
+```bash
+docker-compose up -d
+```
+
+Get inside mysql 
+```bash
+docker exec -it mysql mysql -u root -ppassword
+```
+---
+
+Test sql online
 
 https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_or
 
