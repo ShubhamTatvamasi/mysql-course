@@ -1,6 +1,6 @@
 # mysql-course
 
-Start the mysql server
+Start mysql server
 ```bash
 docker-compose up -d
 ```
@@ -8,6 +8,11 @@ docker-compose up -d
 Get inside mysql 
 ```bash
 docker exec -it mysql mysql -u root -ppassword
+```
+
+Stop mysql server
+```bash
+docker-compose down
 ```
 ---
 
