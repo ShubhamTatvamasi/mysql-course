@@ -68,3 +68,18 @@ DESC pastries;
 ```sql
 DROP TABLE pastries;
 ```
+---
+
+insert data into tables
+```sql
+INSERT INTO cats(name, age)
+VALUES ('Jetson', 7);
+```
+```sql
+INSERT INTO cats(age, name) VALUES (11, 'Draco');
+```
+
+view all data from a table
+```sql
+SELECT * FROM cats;
+```
