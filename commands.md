@@ -24,3 +24,47 @@ show current database
 ```sql
 SELECT database();
 ```
+---
+
+create table in cat_app database
+```sql
+CREATE DATABASE cat_app;
+```
+```sql
+CREATE TABLE cats
+  (
+    name VARCHAR(100),
+    age INT
+  );
+```
+
+show tables
+```sql
+SHOW TABLES;
+```
+
+show columns from table
+```sql
+SHOW COLUMNS FROM cats;
+DESC cats;
+```
+
+delete tables
+```sql
+DROP TABLE cats;
+```
+---
+
+```sql
+CREATE TABLE pastries
+  (
+    name VARCHAR(50),
+    quantity INT
+  );
+```
+```sql
+DESC pastries;
+```
+```sql
+DROP TABLE pastries;
+```
