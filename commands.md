@@ -10,11 +10,6 @@ create new database
 CREATE DATABASE hello_world_db;
 ```
 
-delete database
-```sql
-DROP DATABASE hello_world_db;
-```
-
 use database
 ```sql
 USE hello_world_db;
@@ -23,6 +18,11 @@ USE hello_world_db;
 show current database
 ```sql
 SELECT database();
+```
+
+delete database
+```sql
+DROP DATABASE hello_world_db;
 ```
 ---
 
