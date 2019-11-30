@@ -120,4 +120,7 @@ VALUES ('Linda', 'Belcher', 45),
 ```sql
 SELECT * FROM people;
 ```
+```sql
+DROP TABLE people;
+```
 ---
