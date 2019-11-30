@@ -114,7 +114,7 @@ VALUES (42, 'Bob', 'Belcher');
 ```sql
 INSERT INTO people(first_name, last_name, age)
 VALUES ('Linda', 'Belcher', 45),
-       ('Phillips', 'Frond', 38),
+       ('Phillip', 'Frond', 38),
        ('Calvin', 'Fischoeder', 70);
 ```
 ```sql
