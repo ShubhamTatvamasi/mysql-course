@@ -79,6 +79,14 @@ VALUES ('Jetson', 7);
 INSERT INTO cats(age, name) VALUES (11, 'Draco');
 ```
 
+multiple insert
+```sql
+INSERT INTO cats(name, age)
+VALUES ('Charlie', 10),
+       ('Sadie', 3),
+       ('Lazy Bear', 1);
+```
+
 view all data from a table
 ```sql
 SELECT * FROM cats;
