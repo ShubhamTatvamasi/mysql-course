@@ -55,6 +55,7 @@ DROP TABLE cats;
 ```
 ---
 
+table challenge
 ```sql
 CREATE TABLE pastries
   (
@@ -91,3 +92,32 @@ view all data from a table
 ```sql
 SELECT * FROM cats;
 ```
+---
+
+insert challenge
+```sql
+CREATE TABLE people
+  (
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    age INT
+  );
+```
+```sql
+INSERT INTO people(first_name, last_name, age)
+VALUES ('Tina', 'Belcher', 13);
+```
+```sql
+INSERT INTO people(age, first_name, last_name)
+VALUES (42, 'Bob', 'Belcher');
+```
+```sql
+INSERT INTO people(first_name, last_name, age)
+VALUES ('Linda', 'Belcher', 45),
+       ('Phillips', 'Frond', 38),
+       ('Calvin', 'Fischoeder', 70);
+```
+```sql
+SELECT * FROM people;
+```
+---
