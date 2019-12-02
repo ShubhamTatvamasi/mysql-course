@@ -129,6 +129,115 @@ show warnings
 ```sql
 SHOW WARNINGS;
 ```
+---
+
+Try inserting a cat without an age:
+```sql
+INSERT INTO cats(name) VALUES('Alabama');
+```
+
+Try inserting a nameless and ageless cat:
+```sql
+INSERT INTO cats() VALUES();
+```
+
+Define a new cats2 table with NOT NULL constraints:
+```sql
+CREATE TABLE cats2
+  (
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+  );
+```
+
+Now try inserting an ageless cat:
+```sql
+INSERT INTO cats2(name) VALUES('Texas');
+```
+---
+
+Define a table with a DEFAULT name specified:
+```sql
+CREATE TABLE cats3
+  (
+    name VARCHAR(20) DEFAULT 'unnamed',
+    age INT DEFAULT 99
+  );
+```
+
+Insert a cat without a name:
+```sql
+INSERT INTO cats3(age) VALUES(13);
+```
+---
+
+Combine NOT NULL and DEFAULT:
+```sql
+CREATE TABLE cats4
+  (
+    name VARCHAR(20) NOT NULL DEFAULT 'unnamed',
+    age INT NOT NULL DEFAULT 99
+  );
+```
+---
+
+Define a table with a PRIMARY KEY constraint:
+```sql
+CREATE TABLE unique_cats
+  (
+    cat_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+  );
+```
+
+Insert some new cats:
+```sql
+INSERT INTO unique_cats(cat_id, name, age) VALUES(1, 'Fred', 23);
+INSERT INTO unique_cats(cat_id, name, age) VALUES(2, 'Louise', 3);
+```
+---
+
+Adding in AUTO_INCREMENT:
+```sql
+CREATE TABLE unique_cats2 (
+    cat_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+);
+```
+
+INSERT a couple new cats:
+```sql
+INSERT INTO unique_cats2(name, age) VALUES('Skippy', 4);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Skippy', 4);
+```
+---
+
+Defining The employees table:
+```sql
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    age INT NOT NULL,
+    current_status VARCHAR(255) NOT NULL DEFAULT 'employed'
+);
+```
+
+A test INSERT:
+```sql
+INSERT INTO employees(first_name, last_name, age) VALUES
+('Dora', 'Smith', 58);
+```
+---
+
 
 ---
 Future commands
