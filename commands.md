@@ -124,3 +124,22 @@ SELECT * FROM people;
 DROP TABLE people;
 ```
 ---
+
+show warnings
+```sql
+SHOW WARNINGS;
+```
+
+---
+Future commands
+```sql
+ALTER TABLE cats ADD email varchar(255);
+ALTER TABLE cats MODIFY COLUMN email varchar(100);
+UPDATE INSERT INTO cats(age, name, email) VALUES (11, 'Draco', 'io@123.com');
+
+UPDATE cats 
+SET 
+    email = 'mary@a.com'
+WHERE
+    name = 'Jetson';
+```
