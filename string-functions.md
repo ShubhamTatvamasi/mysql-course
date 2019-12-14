@@ -39,3 +39,28 @@ concat_ws
 ```sql
 SELECT CONCAT_WS(' - ', title, author_fname, author_lname) FROM books;
 ```
+---
+
+substring
+```sql
+SELECT SUBSTRING('Hello World', 1, 4);
+SELECT SUBSTRING('Hello World', 7);
+SELECT SUBSTRING('Hello World', -3);
+
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+```
+```sql
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    ) AS 'short title'
+FROM books;
+```
+
+substr
+```sql
+SELECT SUBSTR('Hello World', 7);
+```
+---
+
