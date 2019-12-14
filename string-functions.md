@@ -64,3 +64,39 @@ SELECT SUBSTR('Hello World', 7);
 ```
 ---
 
+replace
+```sql
+SELECT REPLACE('Hello World', 'Hell', '%$#*');
+SELECT REPLACE('Hello World', 'l', '7');
+SELECT REPLACE('Hello World', 'o', '0');
+
+SELECT REPLACE('HellO World', 'o', '*');
+
+SELECT REPLACE('cheese bread coffee milk', ' ', ' and ');
+
+SELECT REPLACE(title, 'e', '3') FROM books;
+
+SELECT 
+  SUBSTRING(
+    REPLACE(title, 'e', '3'),
+    1,
+    10
+  ) AS 'weired string'
+FROM books;
+
+```
+---
+
+reverse
+```sql
+SELECT REVERSE('Hello World');
+
+SELECT REVERSE('meow meow');
+
+SELECT REVERSE(author_fname) FROM books;
+
+SELECT CONCAT('woof', REVERSE('woof'));
+
+SELECT CONCAT(author_fname, REVERSE(author_fname)) FROM books;
+```
+---
