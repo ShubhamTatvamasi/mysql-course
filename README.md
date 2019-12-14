@@ -10,9 +10,26 @@ Get inside mysql
 docker exec -it mysql mysql -u root -ppassword
 ```
 
+execute sql file
+```bash
+docker exec -i mysql mysql -u root -ppassword cat_app < first_file.sql
+```
+> cat_app is the database 
+
 Stop mysql server
 ```bash
 docker-compose down
+```
+---
+
+### Backup
+```bash
+docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > backup.sql
+```
+
+### Restore
+```bash
+cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
 ```
 ---
 
