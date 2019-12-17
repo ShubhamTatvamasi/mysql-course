@@ -11,7 +11,9 @@ CREATE TABLE orders(
     order_date DATE,
     amount DECIMAL(8,2),
     customer_id INT,
-    FOREIGN KEY(customer_id) REFERENCES customers(id)
+    FOREIGN KEY(customer_id)
+    REFERENCES customers(id)
+    ON DELETE CASCADE
 );
 
 -- Inserting some customers and orders
