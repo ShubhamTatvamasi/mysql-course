@@ -2,17 +2,17 @@
 
 Start mysql server
 ```bash
-docker-compose up -d
+docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=password mysql:5.7
 ```
 
 Get inside mysql 
 ```bash
-docker exec -it mysql mysql -u root -ppassword
+docker exec -it mysql mysql --user=root --password=password
 ```
 
 execute sql file
 ```bash
-docker exec -i mysql mysql -u root -ppassword cat_app < first_file.sql
+docker exec -i mysql mysql --user=root --password=password cat_app < first_file.sql
 ```
 > cat_app is the database 
 
@@ -24,12 +24,12 @@ docker-compose down
 
 ### Backup
 ```bash
-docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > backup.sql
+docker exec CONTAINER /usr/bin/mysqldump --user=root --password=password DATABASE > backup.sql
 ```
 
 ### Restore
 ```bash
-cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
+cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql --user=root --password=password DATABASE
 ```
 ---
 
