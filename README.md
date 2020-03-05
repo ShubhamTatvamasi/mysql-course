@@ -12,9 +12,8 @@ docker exec -it mysql mysql --user=root --password=password
 
 execute sql file
 ```bash
-docker exec -i mysql mysql --user=root --password=password cat_app < first_file.sql
+docker exec -i mysql mysql --user=root --password=password DATABASE < first_file.sql
 ```
-> cat_app is the database 
 
 Stop mysql server
 ```bash
